@@ -4,6 +4,8 @@ import usePrevious, {
     usePreviousNumberArray,
     usePreviousBoolean,
     usePreviousBooleanArray,
+    usePreviousString,
+    usePreviousStringArray,
 } from './usePrevious';
 import { useState } from 'react';
 
@@ -12,6 +14,18 @@ describe('test react-hooks-use-previous', () => {
         const value = 0;
         const { result } = renderHook(() => usePrevious<number>(value, 0));
         expect(result.current).toBe(0);
+    });
+
+    it('should call usePreviousString successfully and assign the correct default value', () => {
+        const value = '';
+        const { result } = renderHook(() => usePreviousString(value));
+        expect(result.current).toBe('');
+    });
+
+    it('should call usePreviousStringArray successfully and assign the correct default value', () => {
+        const value = [''];
+        const { result } = renderHook(() => usePreviousStringArray(value));
+        expect(result.current).toEqual([]);
     });
 
     it('should call usePreviousNumber successfully and assign the correct default value', () => {
