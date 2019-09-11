@@ -5,10 +5,12 @@ module.exports = {
         sourceType: 'module', // Allows for the use of imports
     },
     extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint', 'plugin:prettier/recommended'],
-    plugins: ['@typescript-eslint', 'prettier', 'json-format'],
+    plugins: ['@typescript-eslint', 'prettier', 'json-format', 'react-hooks'],
     rules: {
         '@typescript-eslint/no-use-before-define': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn',
     },
     settings: {
         'json/json-with-comments-files': [],

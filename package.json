@@ -36,8 +36,9 @@
     "test:coverage": "yarn test --coverage --watchAll=false"
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^2.0.1",
     "@types/jest": "^24.0.18",
-    "@types/react": "16.8.0",
+    "@types/react": "16.9.2",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
     "dot-json": "^1.1.0",
@@ -45,6 +46,7 @@
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-json-format": "^2.0.1",
     "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react-hooks": "^2.0.1",
     "husky": "^3.0.5",
     "jest": "^24.9.0",
     "jest-junit": "^8.0.0",
@@ -52,7 +54,8 @@
     "lint-staged": "^9.2.5",
     "nodegit": "^0.26.0",
     "prettier": "^1.18.2",
-    "react": "16.8.0",
+    "react": "16.9.0",
+    "react-test-renderer": "^16.9.0",
     "shelljs": "^0.8.3",
     "ts-jest": "^24.0.2",
     "typescript": "^3.6.3"
