@@ -67,7 +67,12 @@ const MyReactComponent = () => {
     // profit from a much cleaner and more readable syntax
     const prevValue = usePreviousNumber(value);
 
-    return <div/>;
+    return (
+        <div>
+            <span>The previous value was: {prevValue}</span>
+            <span>The current value is: {value}</span>
+        </div>
+    );
 };
 
 export default MyReactComponent;
