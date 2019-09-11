@@ -14,7 +14,7 @@
 
 ## Hooks collection for storing and retrieving previous values
 
-React Hooks Use Previous is a collection of strongly typed and well tested hooks to store and retrieve the previous value of a component property. The most common default values are already set so just close that bracket and save yourself those extra characters.
+React Hooks Use Previous is a collection of strongly typed and well tested hooks to store and retrieve retrieve previous values from any component property. The most common default values are already set so just close that bracket and save yourself those extra characters.
 
 This library works out of the box with React / React Native projects using JavaScript or Typescript and has all necessary type declarations included.
 
@@ -24,31 +24,31 @@ This library works out of the box with React / React Native projects using JavaS
 
 #### Latest stable release
 
-``` sh
+```sh
 npm install --save react-hooks-use-previous
 ```
 
 or
 
-``` sh
+```sh
 yarn add react-hooks-use-previous
 ```
 
 #### Latest Release Candidate
 
-``` sh
+```sh
 npm install --save react-hooks-use-previous@next
 ```
 
 or
 
-``` sh
+```sh
 yarn add react-hooks-use-previous@next
 ```
 
 ### Usage Example
 
-``` typescript
+```typescript
 import React, { useState } from 'react';
 import usePrevious, { usePreviousNumber } from 'react-hooks-use-previous';
 
