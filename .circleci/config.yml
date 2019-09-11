@@ -1,0 +1,178 @@
+version: 2.1
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:12.10.0
+
+whitelist: &whitelist
+  paths:
+    - .npmignore
+    - coverage/*
+    - dist/*
+    - node_modules/*
+    - reports/*
+    - scripts/*
+    - src/*
+    - .eslintignore
+    - .eslintrc.js
+    - .huskyrc.js
+    - .prettierignore
+    - .prettierrc.js
+    - jest.config.js
+    - LICENSE.md
+    - lint-staged.config.js
+    - package.json
+    - README.md
+    - tsconfig.json
+
+orbs:
+  codecov: codecov/codecov@1.0.5
+
+jobs:
+  checkout:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run:
+          name: Install Dependencies
+          command: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - persist_to_workspace:
+          root: ~/repo
+          <<: *whitelist
+
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Lint TypeScript code
+          command: yarn lint:ci
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - reports/eslint/*
+
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Test TypeScript code
+          command: yarn test:ci
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - coverage/*
+            - reports/jest/*
+
+  codecov:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - codecov/upload:
+          file: ./coverage/lcov.info
+
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Build TypeScript code
+          command: yarn build
+      - persist_to_workspace:
+          root: ~/repo
+          <<: *whitelist
+      - store_test_results:
+          path: reports/*
+      - store_artifacts:
+          path: reports/*
+
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Execute npm-deploy.js script
+          command: node scripts/npm-deploy.js
+          
+workflows:
+  build:
+    jobs:
+      - checkout
+      - test:
+          requires:
+            - checkout
+      - lint:
+          requires:
+            - checkout
+      - codecov:
+          requires:
+            - test
+      - build:
+          requires:
+            - test
+            - lint
+
+  release:
+    jobs:
+      - checkout:
+          filters:
+            tags:
+              only: /^v[0-9]+(\.[0-9]+)*(\-(rc([0-9]+)?))?$/
+            branches:
+              ignore: /.*/
+      - test:
+          filters:
+            tags:
+              only: /^v[0-9]+(\.[0-9]+)*(\-(rc([0-9]+)?))?$/
+            branches:
+              ignore: /.*/
+          requires:
+            - checkout
+      - lint:
+          filters:
+            tags:
+              only: /^v[0-9]+(\.[0-9]+)*(\-(rc([0-9]+)?))?$/
+            branches:
+              ignore: /.*/
+          requires:
+            - checkout
+      - codecov:
+          filters:
+            tags:
+              only: /^v[0-9]+(\.[0-9]+)*(\-(rc([0-9]+)?))?$/
+            branches:
+              ignore: /.*/
+          requires:
+            - test
+      - build:
+          filters:
+            tags:
+              only: /^v[0-9]+(\.[0-9]+)*(\-(rc([0-9]+)?))?$/
+            branches:
+              ignore: /.*/
+          requires:
+            - test
+            - lint
+      - deploy:
+          filters:
+            tags:
+              only: /^v[0-9]+(\.[0-9]+)*(\-(rc([0-9]+)?))?$/
+            branches:
+              ignore: /.*/
+          requires:
+            - build

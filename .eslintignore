@@ -1,0 +1,7 @@
+dist
+coverage
+scripts
+
+# eslint ignores hidden files by default
+!.*
+**/node_modules

@@ -1,0 +1,63 @@
+{
+  "name": "react-hooks-use-previous",
+  "version": "1.0.0",
+  "description": "React Hooks to store and retrieve previous values of any component property.",
+  "keywords": [
+    "hooks",
+    "nodejs",
+    "react",
+    "react-hooks",
+    "react-native",
+    "typescript"
+  ],
+  "homepage": "https://github.com/MichaelHettmer/react-hooks-use-previous#readme",
+  "bugs": {
+    "url": "https://github.com/MichaelHettmer/react-hooks-use-previous/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelHettmer/react-hooks-use-previous.git"
+  },
+  "license": "MIT",
+  "author": "Michael Hettmer",
+  "files": [
+    "dist/**/*"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext '.js,.jsx,.ts,.tsx,.json,.jsonc'",
+    "lint:ci": "yarn lint --format junit --output-file ./reports/eslint/results.xml",
+    "lint:fix": "yarn lint --fix",
+    "release": "node scripts/push-release.js",
+    "test": "jest",
+    "test:ci": "CI=true JEST_JUNIT_OUTPUT_DIR=./reports/jest JEST_JUNIT_OUTPUT_NAME=results.xml yarn test:coverage --runInBand --reporters=\"default\" --reporters=\"jest-junit\"",
+    "test:coverage": "yarn test --coverage --watchAll=false"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/react": "16.8.0",
+    "@typescript-eslint/eslint-plugin": "^2.2.0",
+    "@typescript-eslint/parser": "^2.2.0",
+    "dot-json": "^1.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-json-format": "^2.0.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "jest-junit": "^8.0.0",
+    "jest-mock-console": "^1.0.0",
+    "lint-staged": "^9.2.5",
+    "nodegit": "^0.26.0",
+    "prettier": "^1.18.2",
+    "react": "16.8.0",
+    "shelljs": "^0.8.3",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.6.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}
