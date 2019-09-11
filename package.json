@@ -1,7 +1,7 @@
 {
   "name": "react-hooks-use-previous",
   "version": "1.0.0",
-  "description": "React Hooks to store and retrieve previous values of any component property.",
+  "description": "Strongly typed and well tested React Hooks to store and retrieve previous values of any component property.",
   "keywords": [
     "hooks",
     "nodejs",

@@ -12,18 +12,11 @@
 [![discord](https://img.shields.io/discord/620938362379042837)](https://discord.gg/R2jNASR)
 [![twitter](https://img.shields.io/twitter/follow/MichaelHettmer.svg?label=Follow%20@MichaelHettmer)](https://twitter.com/intent/follow?screen_name=MichaelHettmer)
 
-## Configurable redux-saga execution management
+## Hooks collection for storing and retrieving previous values
 
-React Hooks Use Previous provides an easy way to quickly run multiple sagas concurrently in a tested and widely used way.
+React Hooks Use Previous is a collection of strongly typed and well tested hooks to store and retrieve the previous value of a component property. The most common default values are already set so just close that bracket and save yourself those extra characters.
 
-This package is based on the root saga pattern from the [official documentation](https://redux-saga.js.org/docs/advanced/RootSaga.html) and therefore an easy way to get the described behavior without copy-pasting it into every new project.
-
-Additionally the root saga behavior was extended by the following fully configurable and optional features (more to come):
-
-* Strictly typed and fully Typescript compatible
-* Maximum retry count for restarting child sagas
-* Default error handling with a warning message including the saga name
-* Custom error handling callback
+This library works out of the box with React / React Native projects using JavaScript or Typescript and has all necessary type declarations included.
 
 ## Getting started
 
@@ -56,37 +49,26 @@ yarn add react-hooks-use-previous@next
 ### Usage Example
 
 ``` typescript
-import { createStore, applyMiddleware } from 'redux';
-import createSagaMiddleware from '@redux-saga/core';
-import createRootSaga from 'react-hooks-use-previous';
+import React, { useState } from 'react';
+import usePrevious, { usePreviousNumber } from 'react-hooks-use-previous';
 
-function* saga1() {
-    /*...*/
-}
-function* saga2() {
-    /*...*/
-}
+const MyReactComponent = () => {
+    // This is the state variable from which we need
+    // the previous value while rendering
+    const [value, setValue] = useState<number>(0);
 
-// Option 1: Execute all specified sagas concurrently with default options.
-const rootSaga = createRootSaga([saga1, saga2]);
+    // Option 1: Use the generic hook so that we can
+    // assign a custom initial previous value (=13)
+    // for the first component render execution
+    const prevValue = usePrevious<number>(value, 13);
 
-// Option 2: Start all sagas with (partly) customized default options.
-const rootSaga = createRootSaga([saga1, saga2], {
-    maxRetries: 3,
-    errorHandler: (error, saga, options) => console.err(
-        `Error in saga ${saga.name} with options ${options}: ${error}`);
-});
+    // Option 2: Use one of the predefined hooks which
+    // already ship with a default value (e.g. =0) and
+    // profit from a much cleaner and more readable syntax
+    const prevValue = usePreviousNumber(value);
 
-// Option 3: Start all sagas with (partly) customized default options
-// and use specific custom options only for saga1.
-// All other options of saga1 fallback to the (customized) default ones.
-const rootSaga = createRootSaga([[saga1, { maxRetries: Infinity }], saga2], {
-    maxRetries: 3,
-    onError: (error, saga, options) => console.error(
-        `Error in saga ${saga.name} with options ${options}: ${error}`),
-});
+    return <div/>;
+};
 
-const sagaMiddleware = createSagaMiddleware();
-const store = createStore(reducer, applyMiddleware(sagaMiddleware));
-sagaMiddleware.run(rootSaga);
+export default MyReactComponent;
 ```
