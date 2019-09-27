@@ -54,7 +54,7 @@
     "lint-staged": "^9.2.5",
     "nodegit": "^0.26.0",
     "prettier": "^1.18.2",
-    "react": "16.9.0",
+    "react": "16.10.0",
     "react-test-renderer": "^16.9.0",
     "shelljs": "^0.8.3",
     "ts-jest": "^24.0.2",
