@@ -71,4 +71,12 @@ describe('test react-hooks-use-previous', () => {
         expect(result.current.prevValue).toBe(77);
         expect(result.current.value).toBe(33);
     });
+
+    it('should not update on rerender if prop is unchanged', () => {
+        const { result, rerender } = renderHook(() => usePrevious('current', 'initial'));
+
+        rerender();
+
+        expect(result.current).not.toBe('current');
+    });
 });
