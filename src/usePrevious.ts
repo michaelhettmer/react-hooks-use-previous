@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 
 /**
  * Predefined hook to store and retrieve the previous value of the given reference to a string.
@@ -75,11 +75,14 @@ export const usePreviousBooleanArray = (value: boolean[], initialPreviousValue: 
  * the watched property was not updated.
  */
 const usePrevious = <T>(value: T, initialPreviousValue: T) => {
-    const ref = useRef<T>(initialPreviousValue);
-    useEffect(() => {
-        ref.current = value;
-    }, [value]);
-    return ref.current;
+    const { current } = useRef({ target: value, value: initialPreviousValue });
+
+    if (current.target !== value) {
+        current.value = current.target;
+        current.target = value;
+    }
+
+    return current.value;
 };
 
 export default usePrevious;
