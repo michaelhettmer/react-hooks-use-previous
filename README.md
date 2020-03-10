@@ -93,8 +93,8 @@ const MyReactComponent = () => {
 
     return (
         <div>
-            <span>The previous value was: {prevValue}</span>
-            <span>The current value is: {value}</span>
+            <span>{`The previous value was: ${prevValue}`}</span>
+            <span>{`The current value is: ${value}`}</span>
         </div>
     );
 };
