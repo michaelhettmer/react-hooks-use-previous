@@ -138,13 +138,13 @@ Thanks goes to these people ([emoji key][emojis]):
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://michael-hettmer.de"><img src="https://avatars0.githubusercontent.com/u/13876624?v=4" width="100px;" alt="Michael Hettmer"/><br /><sub><b>Michael Hettmer</b></sub></a><br /><a href="https://github.com/react-hooks-use-previous/react-hooks-use-previous/commits?author=react-hooks-use-previous" title="Code">💻</a> <a href="https://github.com/react-hooks-use-previous/react-hooks-use-previous/commits?author=react-hooks-use-previous" title="Documentation">📖</a> <a href="#infra-react-hooks-use-previous" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/react-hooks-use-previous/react-hooks-use-previous/commits?author=react-hooks-use-previous" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://michael-hettmer.de"><img src="https://avatars0.githubusercontent.com/u/13876624?v=4" width="100px;" alt=""/><br /><sub><b>Michael Hettmer</b></sub></a><br /><a href="https://github.com/MichaelHettmer/react-hooks-use-previous/commits?author=MichaelHettmer" title="Code">💻</a> <a href="https://github.com/MichaelHettmer/react-hooks-use-previous/commits?author=MichaelHettmer" title="Documentation">📖</a> <a href="#infra-MichaelHettmer" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/MichaelHettmer/react-hooks-use-previous/commits?author=MichaelHettmer" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/chrismilson"><img src="https://avatars2.githubusercontent.com/u/13655076?v=4" width="100px;" alt=""/><br /><sub><b>Chris Milson</b></sub></a><br /><a href="https://github.com/MichaelHettmer/react-hooks-use-previous/commits?author=chrismilson" title="Code">💻</a> <a href="https://github.com/MichaelHettmer/react-hooks-use-previous/issues?q=author%3Achrismilson" title="Bug reports">🐛</a> <a href="https://github.com/MichaelHettmer/react-hooks-use-previous/commits?author=chrismilson" title="Tests">⚠️</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors][all-contributors] specification.
