@@ -1,0 +1,21 @@
+{
+  "git.inputValidationSubjectLength": 72,
+  "git.inputValidationLength": 72,
+  "git.inputValidation": "warn",
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.alwaysShowStatus": true,
+  "eslint.enable": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "jest.showCoverageOnLoad": true,
+  "jest.enableCodeLens": false
+}

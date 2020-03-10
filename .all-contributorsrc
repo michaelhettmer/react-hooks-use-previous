@@ -1,0 +1,27 @@
+ {
+  "projectName": "react-hooks-use-previous",
+  "projectOwner": "MichaelHettmer",
+  "imageSize": 100,
+  "commit": false,
+  "contributorsPerLine": 7,
+  "repoHost": "https://github.com",
+  "repoType": "github",
+  "skipCi": false,
+  "files": [
+    "README.md"
+  ],
+  "contributors": [
+    {
+      "login": "MichaelHettmer",
+      "name": "Michael Hettmer",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/13876624?v=4",
+      "profile": "https://michael-hettmer.de",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "test"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/.commitlintrc.js">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/.commitlintrc.js" classname="/home/mht/src/react-hooks-use-previous/.commitlintrc" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/.eslintrc.json">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/.eslintrc.json" classname="/home/mht/src/react-hooks-use-previous/.eslintrc" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/.github/renovate.json">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/.github/renovate.json" classname="/home/mht/src/react-hooks-use-previous/.github/renovate" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/.huskyrc.js">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/.huskyrc.js" classname="/home/mht/src/react-hooks-use-previous/.huskyrc" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/.prettierrc.json">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/.prettierrc.json" classname="/home/mht/src/react-hooks-use-previous/.prettierrc" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/.vscode/settings.json">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/.vscode/settings.json" classname="/home/mht/src/react-hooks-use-previous/.vscode/settings" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/jest.config.js">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/jest.config.js" classname="/home/mht/src/react-hooks-use-previous/jest.config" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/lint-staged.config.js">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/lint-staged.config.js" classname="/home/mht/src/react-hooks-use-previous/lint-staged.config" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/package-lock.json">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/package-lock.json" classname="/home/mht/src/react-hooks-use-previous/package-lock" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/package.json">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/package.json" classname="/home/mht/src/react-hooks-use-previous/package" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/src/index.ts">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/src/index.ts" classname="/home/mht/src/react-hooks-use-previous/src/index" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/src/usePrevious.test.ts">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/src/usePrevious.test.ts" classname="/home/mht/src/react-hooks-use-previous/src/usePrevious.test" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/src/usePrevious.ts">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/src/usePrevious.ts" classname="/home/mht/src/react-hooks-use-previous/src/usePrevious" />
+</testsuite>
+<testsuite package="org.eslint" time="0" tests="1" errors="0" name="/home/mht/src/react-hooks-use-previous/tsconfig.json">
+<testcase time="0" name="/home/mht/src/react-hooks-use-previous/tsconfig.json" classname="/home/mht/src/react-hooks-use-previous/tsconfig" />
+</testsuite>
+</testsuites>

@@ -1,19 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "lib": [
-      "es6"
-    ],
-    "outDir": "./dist",
-    "strict": true,
-    "declaration": true,
-    "sourceMap": true
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true,
+      "declaration": true,
+      "downlevelIteration": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "importHelpers": true,
+      "isolatedModules": true,
+      "lib": ["es6"],
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "outDir": "./dist",
+      "removeComments": true,
+      "resolveJsonModule": true,
+      "rootDir": "src",
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "strict": true,
+      "target": "es6"
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src"],
+  "exclude": ["dist", "node_modules", "**/*.test.ts"]
 }
