@@ -171,7 +171,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [release]: https://github.com/semantic-release/semantic-release
 [commits-badge]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
 [commits]: https://conventionalcommits.org
-[twitter-badge]: https://img.shields.io/twitter/follow/react-hooks-use-previous.svg?label=Follow%20@react-hooks-use-previous
+[twitter-badge]: https://img.shields.io/twitter/follow/MichaelHettmer.svg?label=Follow%20@MichaelHettmer
 [twitter]: https://twitter.com/intent/follow?screen_name=MichaelHettmer
 [discord-badge]: https://img.shields.io/discord/620938362379042837
 [discord]: https://discord.gg/MEpKcF3
