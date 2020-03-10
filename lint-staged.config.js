@@ -1,3 +1,4 @@
 module.exports = {
-    '*.{js,jsx,ts,tsx,json,jsonc}': ['yarn lint:fix', 'git add'],
+    '*.{js,jsx,json,jsonc}': ['npm run lint:fix'],
+    '**/.circleci/config.yml': filenames => filenames.map(filename => `npm run lint:circleci "${filename}"`),
 };

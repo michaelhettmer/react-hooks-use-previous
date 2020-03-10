@@ -1,10 +1,9 @@
 ---
 name: Bug report
-about: Create a report to help me improve
+about: Create a report to help me fix it
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 **Describe the bug**
@@ -23,10 +22,8 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Versions of relevant dependencies:**
- - Redux: 
- - Redux-Saga: 
- - (React-Redux, etc.)
+**Version number and versions of relevant dependencies:**
+Version number of this project and all other relevant dependencies
 
 **Additional context**
 Add any other context about the problem here.

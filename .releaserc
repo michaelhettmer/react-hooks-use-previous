@@ -1,0 +1,49 @@
+{
+    "branches": [
+        "master",
+        "next"
+    ],
+    "plugins": [
+        [
+            "@semantic-release/commit-analyzer",
+            {
+                "preset": "conventionalcommits"
+            }
+        ],
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/changelog",
+        [
+            "@semantic-release/npm",
+            {
+                "tarballDir": "dist"
+            }
+        ],
+        [
+            "@semantic-release/git",
+            {
+                "assets": [
+                    "package.json",
+                    "CHANGELOG.md"
+                ]
+            }
+        ],
+        [
+            "@semantic-release/github",
+            {
+                "assets": [
+                    {
+                        "path": "dist/*",
+                        "label": "Transpiled distribution"
+                    },
+                    {
+                        "path": "dist/*.tgz",
+                        "label": "NPM tarball"
+                    }
+                ],
+                "assignees": [
+                    "MichaelHettmer"
+                ]
+            }
+        ]
+    ]
+}

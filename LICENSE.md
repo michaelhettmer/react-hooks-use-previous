@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2019 Michael Hettmer
+Copyright (c) 2020 Michael Hettmer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
