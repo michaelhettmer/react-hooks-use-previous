@@ -1,4 +1,4 @@
- {
+{
   "projectName": "react-hooks-use-previous",
   "projectOwner": "MichaelHettmer",
   "imageSize": 100,
@@ -20,6 +20,17 @@
         "code",
         "doc",
         "infra",
+        "test"
+      ]
+    },
+    {
+      "login": "chrismilson",
+      "name": "Chris Milson",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/13655076?v=4",
+      "profile": "https://github.com/chrismilson",
+      "contributions": [
+        "code",
+        "bug",
         "test"
       ]
     }
