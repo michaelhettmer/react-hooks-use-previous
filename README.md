@@ -1,7 +1,7 @@
 <div align="center">
-<h1>react-hooks-use-previous</h1>
-
 <img src="./logo_wide_slim.png" alt="React Hooks Use Previous Logo" />
+
+<h1>react-hooks-use-previous</h1>
 
 <p>Strongly typed and well tested React Hooks to store and retrieve previous values from any component property.</p>
 </div>
@@ -15,7 +15,7 @@
 [![MIT License][license-badge]][license]
 [![Semantic Release][release-badge]][release]
 [![Conventional Commits][commits-badge]][commits]
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg)](#contributors-)
 [![PRs Welcome][prs-badge]][prs]
 [![Code of Conduct][coc-badge]][coc]
 [![Discord][discord-badge]][discord]

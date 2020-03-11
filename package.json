@@ -38,6 +38,7 @@
         "test:coverage": "npm run test -- --coverage --watchAll=false",
         "validate": "npm-run-all lint test build"
     },
+    "dependencies": {},
     "devDependencies": {
         "@commitlint/cli": "8.3.5",
         "@commitlint/config-conventional": "8.3.4",
