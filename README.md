@@ -75,6 +75,7 @@ yarn add react-hooks-use-previous@next
 ```typescript
 import React, { useState } from 'react';
 import usePrevious, { usePreviousNumber } from 'react-hooks-use-previous';
+import { isEqual } from 'lodash';
 
 const MyReactComponent = () => {
     // This is the state variable from which we need
@@ -90,6 +91,12 @@ const MyReactComponent = () => {
     // already ship with a default value (e.g. =0) and
     // profit from a much cleaner and more readable syntax
     const prevValue = usePreviousNumber(value);
+
+    // Optional: Pass a custom equality function in a configuration
+    // object as the third parameter. The default equality check is
+    // a reference comparison. This additional parameter allows e.g.
+    // a deep value comparison to check if an update is necessary.
+    const prevValue = usePrevious<number[]>(value, [], { equalityFn: (a, b) => isEqual(a, b) });
 
     return (
         <div>

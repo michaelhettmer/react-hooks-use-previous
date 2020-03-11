@@ -52,6 +52,14 @@ describe('test react-hooks-use-previous', () => {
         expect(result.current).toEqual([]);
     });
 
+    it('should not update on rerender if prop is unchanged', () => {
+        const { result, rerender } = renderHook(() => usePrevious('current', 'initial'));
+
+        rerender();
+
+        expect(result.current).not.toBe('current');
+    });
+
     it('should return the previous value when updating the associated state variable', () => {
         const useTestHook = () => {
             const [value, setValue] = useState(77);
@@ -59,7 +67,7 @@ describe('test react-hooks-use-previous', () => {
             return { value, setValue, prevValue };
         };
 
-        const { result } = renderHook(() => useTestHook());
+        const { result, rerender } = renderHook(() => useTestHook());
 
         expect(result.current.prevValue).toBe(0);
         expect(result.current.value).toBe(77);
@@ -68,15 +76,53 @@ describe('test react-hooks-use-previous', () => {
             result.current.setValue(33);
         });
 
+        rerender();
+
         expect(result.current.prevValue).toBe(77);
         expect(result.current.value).toBe(33);
     });
 
-    it('should not update on rerender if prop is unchanged', () => {
-        const { result, rerender } = renderHook(() => usePrevious('current', 'initial'));
+    it('should still work with empty configuration object', () => {
+        const useTestHook = () => {
+            const [value, setValue] = useState(77);
+            const prevValue = usePrevious<number>(value, 0, {});
+            return { value, setValue, prevValue };
+        };
+
+        const { result, rerender } = renderHook(() => useTestHook());
+
+        expect(result.current.prevValue).toBe(0);
+        expect(result.current.value).toBe(77);
+
+        act(() => {
+            result.current.setValue(33);
+        });
 
         rerender();
 
-        expect(result.current).not.toBe('current');
+        expect(result.current.prevValue).toBe(77);
+        expect(result.current.value).toBe(33);
+    });
+
+    it('should not update on change if equality function returns true nevertheless', () => {
+        const useTestHook = () => {
+            const [value, setValue] = useState(77);
+            const prevValue = usePrevious<number>(value, 0, { equalityFn: () => true });
+            return { value, setValue, prevValue };
+        };
+
+        const { result, rerender } = renderHook(() => useTestHook());
+
+        expect(result.current.prevValue).toBe(0);
+        expect(result.current.value).toBe(77);
+
+        act(() => {
+            result.current.setValue(33);
+        });
+
+        rerender();
+
+        expect(result.current.prevValue).toBe(0);
+        expect(result.current.value).toBe(33);
     });
 });
