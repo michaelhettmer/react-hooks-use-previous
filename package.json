@@ -57,7 +57,7 @@
         "eslint-plugin-json": "2.1.1",
         "eslint-plugin-prettier": "3.1.2",
         "eslint-plugin-react-hooks": "3.0.0",
-        "husky": "4.2.3",
+        "husky": "4.2.4",
         "jest": "25.3.0",
         "jest-junit": "10.0.0",
         "jest-mock-console": "1.0.0",
