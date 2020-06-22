@@ -67,7 +67,7 @@
         "prettier": "2.0.5",
         "react": "16.13.1",
         "react-test-renderer": "16.13.1",
-        "semantic-release": "17.0.8",
+        "semantic-release": "17.1.0",
         "shelljs": "0.8.4",
         "ts-jest": "26.1.1",
         "typescript": "3.9.5"
