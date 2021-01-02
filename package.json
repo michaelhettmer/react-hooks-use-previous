@@ -52,7 +52,7 @@
         "chokidar-cli": "2.1.0",
         "commitlint-circle": "1.0.0",
         "dot-json": "1.2.1",
-        "eslint": "7.16.0",
+        "eslint": "7.17.0",
         "eslint-config-prettier": "7.1.0",
         "eslint-plugin-json": "2.1.2",
         "eslint-plugin-prettier": "3.3.0",
