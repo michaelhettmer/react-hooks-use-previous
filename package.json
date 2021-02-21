@@ -51,7 +51,7 @@
         "@typescript-eslint/parser": "4.15.1",
         "chokidar-cli": "2.1.0",
         "commitlint-circle": "1.0.0",
-        "dot-json": "1.2.1",
+        "dot-json": "1.2.2",
         "eslint": "7.20.0",
         "eslint-config-prettier": "7.2.0",
         "eslint-plugin-json": "2.1.2",
