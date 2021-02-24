@@ -6,7 +6,7 @@ orbs:
 jobs:
     checkout:
         docker:
-            - image: circleci/node:12.20.2
+            - image: circleci/node:12.21.0
         steps:
             - checkout
             - restore_cache:
@@ -27,7 +27,7 @@ jobs:
 
     commitlint:
         docker:
-            - image: circleci/node:12.20.2
+            - image: circleci/node:12.21.0
         steps:
             - attach_workspace:
                   at: ~/project
@@ -37,7 +37,7 @@ jobs:
 
     lint:
         docker:
-            - image: circleci/node:12.20.2
+            - image: circleci/node:12.21.0
         steps:
             - attach_workspace:
                   at: ~/project
@@ -51,7 +51,7 @@ jobs:
 
     test:
         docker:
-            - image: circleci/node:12.20.2
+            - image: circleci/node:12.21.0
         steps:
             - attach_workspace:
                   at: ~/project
@@ -66,7 +66,7 @@ jobs:
 
     codecov:
         docker:
-            - image: circleci/node:12.20.2
+            - image: circleci/node:12.21.0
         steps:
             - attach_workspace:
                   at: ~/project
@@ -75,7 +75,7 @@ jobs:
 
     build:
         docker:
-            - image: circleci/node:12.20.2
+            - image: circleci/node:12.21.0
         steps:
             - attach_workspace:
                   at: ~/project
@@ -93,7 +93,7 @@ jobs:
 
     release:
         docker:
-            - image: circleci/node:12.20.2
+            - image: circleci/node:12.21.0
         steps:
             - attach_workspace:
                   at: ~/project
