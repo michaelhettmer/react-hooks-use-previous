@@ -59,7 +59,7 @@
         "eslint-plugin-react-hooks": "4.2.0",
         "husky": "4.3.8",
         "jest": "27.2.4",
-        "jest-junit": "12.3.0",
+        "jest-junit": "13.0.0",
         "jest-mock-console": "1.2.3",
         "lint-staged": "10.5.4",
         "nodegit": "0.27.0",
